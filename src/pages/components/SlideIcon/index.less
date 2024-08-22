@@ -1,0 +1,49 @@
+.slide-indicator {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #000;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  &.visible {
+    opacity: 1;
+    animation: bounce 2s infinite;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  span {
+    margin-bottom: 4px;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .slide-indicator {
+    display: none;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

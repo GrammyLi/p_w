@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5", // 编译后生成的JavaScript版本
+    "lib": ["dom", "dom.iterable", "esnext"], // 编译中需要引入的库
+    "allowJs": true, // 允许编译JavaScript文件
+    "skipLibCheck": true, // 跳过库的类型检查
+    "esModuleInterop": true, // 允许默认导入
+    "allowSyntheticDefaultImports": true, // 允许合成默认导入
+    "strict": true, // 启用所有严格的类型检查选项
+    "forceConsistentCasingInFileNames": true, // 在文件和文件名中强制一致的大小写
+    "noFallthroughCasesInSwitch": true, // 禁止switch语句的fallthrough行为
+    "module": "esnext", // 使用的模块系统
+    "moduleResolution": "node", // 决定如何处理模块
+    "resolveJsonModule": true, // 允许导入JSON文件
+    "isolatedModules": true, // 启用每个文件作为独立模块
+    "jsx": "react-jsx", // 启用JSX，React17+使用 react-jsx
+    "outDir": "./build" // 输出目录
+  },
+  "include": [
+    "src/**/*" // 包含的文件
+  ],
+  "exclude": [
+    "node_modules", // 排除的文件夹
+    "build" // 排除的输出文件夹
+  ]
+}
