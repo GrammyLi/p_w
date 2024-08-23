@@ -6,8 +6,15 @@ import "./index.less";
 import Projects from "./Projects";
 import HomeIcon from "./components/HomeIcon";
 import SlideIcon from "./components/SlideIcon";
+import { useNavigate } from "react-router-dom"; // 导入 useNavigate
 
 const Home: React.FC = () => {
+  const navigate = useNavigate(); // 初始化 useNavigate 钩子
+
+  const handleLearnMoreClick = () => {
+    navigate("/about"); // 跳转到简介页面
+  };
+
   return (
     <>
       <div className="home">
@@ -28,6 +35,7 @@ const Home: React.FC = () => {
                 border: "1px solid #4096ff",
                 color: "#4096ff",
               }}
+              onClick={handleLearnMoreClick} // 绑定点击事件
             >
               了解更多
             </Button>

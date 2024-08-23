@@ -13,7 +13,7 @@ module.exports = {
   entry: "./src/index.tsx", // 入口文件
   output: {
     // filename: "bundle.js",
-    // filename: "[name].[contenthash].js", // 使用内容哈希
+    filename: "js/[name].[contenthash].js", // 使用内容哈希，并将 JS 文件输出到 js/ 目录
     path: path.resolve(__dirname, "build"),
   },
 

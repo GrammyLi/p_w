@@ -94,7 +94,15 @@ const GResume: React.FC = () => {
       {projects.map((project, projectIndex) =>
         project?.isResume ? (
           <div key={projectIndex}>
-            <Title level={3}>{project.name}</Title>
+            <Link
+              href={project?.codeLink}
+              target="_blank"
+              style={{
+                textDecorationLine: "underline",
+              }}
+            >
+              <Title level={3}>{project.name}</Title>
+            </Link>
             {project.details.map((detail, detailIndex) => (
               <Paragraph key={detailIndex}>{detail}</Paragraph>
             ))}

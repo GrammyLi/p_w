@@ -16,7 +16,7 @@ export const projects: Project[] = [
     preveiwLink: "",
     codeLink: "https://github.com/GrammyLi/bbs",
     details: [
-      "前端：React + TypeScript + Ant , 后端：Python + Flask + sqlite3 ",
+      "前端：TypeScript + React + umi4 + Ant + Redux, 后端：Python + Flask + sqlite3 ",
       "实现普通用户的注册、登录，发帖、评论，管理员可以删除帖子，添加模块、修改用户信息等",
       "通过密码加盐处理保护用户密码安全，利用 Token 防范 XSRF 攻击",
     ],
@@ -43,8 +43,8 @@ export const projects: Project[] = [
     codeLink: "https://github.com/GrammyLi/GrammyLi.github.io/tree/main/f/game",
     details: [
       "结合 Canvas 和 JavaScript , 基于此框架实现打砖块、飞机大战、flappy bird等游戏",
-      "实现游戏资源预加载功能，程序运行前从资源管理器中预加载图片资源, 无需在运行过程中重复加 载，提高游戏运行性能；",
-      "实现数据双向绑定、事件注册机制，支持在游戏运行中实时暂停游戏、修改游戏fps、角色运动速 度、关卡编辑等效果",
+      "实现游戏资源预加载功能，程序运行前从资源管理器中预加载图片资源, 无需在运行过程中重复加载，提高游戏运行性能",
+      "实现数据双向绑定、事件注册机制，支持在游戏运行中实时暂停游戏、修改游戏fps、角色运动速度、关卡编辑等效果",
       // "运用 OOP 思想，对冗余代码抽象化，便于管理各种游戏对象",
     ],
     isResume: true,

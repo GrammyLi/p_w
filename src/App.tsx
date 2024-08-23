@@ -1,3 +1,4 @@
+import { Spin } from "antd";
 import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.less";
@@ -17,17 +18,7 @@ const App: React.FC = () => {
         <AppMenu />
         <div className="content">
           <Suspense
-            fallback={
-              <div
-                style={{
-                  width: "100%",
-                  height: 500,
-                  marginTop: 16,
-                }}
-              >
-                老李的页面在加载中...
-              </div>
-            }
+            fallback={<Spin className="App__spin"/>}
           >
             <Routes>
               <Route path="/" element={<Home />} />
