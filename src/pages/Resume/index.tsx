@@ -17,8 +17,8 @@ import Avatar from "../../asset/avatar.jpg";
 
 const { Title, Paragraph, Text, Link } = Typography;
 
-const GResume: React.FC = () => {
-  const isCv = false;
+const GResume = (props: { isCv: boolean }) => {
+  const { isCv } = props;
 
   return (
     <div
@@ -94,18 +94,46 @@ const GResume: React.FC = () => {
       {projects.map((project, projectIndex) =>
         project?.isResume ? (
           <div key={projectIndex}>
-            <Link
-              href={project?.codeLink}
-              target="_blank"
-              style={{
-                textDecorationLine: "underline",
-              }}
-            >
+            {project?.codeLink ? (
+              <Link
+                href={project?.codeLink}
+                target="_blank"
+                style={{
+                  textDecorationLine: "underline",
+                }}
+              >
+                <Title level={3}>{project.name}</Title>
+              </Link>
+            ) : (
               <Title level={3}>{project.name}</Title>
-            </Link>
-            {project.details.map((detail, detailIndex) => (
-              <Paragraph key={detailIndex}>{detail}</Paragraph>
-            ))}
+            )}
+
+            {project.details.map((detail, detailIndex) =>
+              typeof detail === "string" ? (
+                <Paragraph key={detailIndex}>{detail}</Paragraph>
+              ) : (
+                <Paragraph key={detailIndex}>
+                  {detail.link ? (
+                    <>
+                      {" "}
+                      <Link
+                        href={detail.link}
+                        target="_blank"
+                        style={{
+                          textDecorationLine: "underline",
+                          marginRight: 8,
+                        }}
+                      >
+                        {detail.name}
+                      </Link>
+                      {detail.text ? `:${detail.text}` : ""}
+                    </>
+                  ) : (
+                    `${detail.name}: ${detail.text}`
+                  )}
+                </Paragraph>
+              )
+            )}
           </div>
         ) : null
       )}

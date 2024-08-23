@@ -1,16 +1,25 @@
 // src/data/projects.ts
+
+export type detailsType =
+  | {
+      link: string;
+      name: string;
+      text: string;
+    }
+  | string;
+
 export interface Project {
   name: string;
   cover: string;
   preveiwLink: string;
   codeLink: string;
-  details: string[];
+  details: detailsType[];
   isResume?: boolean;
 }
 
 export const projects: Project[] = [
   {
-    name: "论坛",
+    name: "基于 Flask 实现论坛系统",
     cover:
       "https://images.qiecdn.com/news-aHR0cDovL2luZXdzLmd0aW1nLmNvbS9uZXdzYXBwX21hdGNoLzAvMTEwNjY1Nzk1NTAvMA",
     preveiwLink: "",
@@ -65,6 +74,96 @@ export const projects: Project[] = [
     ],
     isResume: false,
   },
+  // 自制框架和工具系列
+  {
+    name: "自制框架和工具系列",
+    cover: "",
+    preveiwLink: "",
+    codeLink: "",
+    details: [
+      {
+        name: "g-echart",
+        text: "自制可视化库，实现柱形图和折线图",
+        link: "https://grammyli.com/c/visualization/", // 可选：链接到详细说明或代码仓库
+      },
+      // {
+      //   name: "g-pinyin",
+      //   text: "简易拼音输入法。",
+      //   link: "",
+      // },
+      {
+        name: "g-formatter",
+        text: "在线 js 代码格式化工具",
+        link: "https://grammyli.com/t/formatter/",
+      },
+      // {
+      //   name: "g-game-framework",
+      //   text: "基于自制游戏引擎，实现 cxk basketball、flappy bird 和 stick hero 等游戏。",
+      //   link: "",
+      // },
+      {
+        name: "g-console",
+        text: "实现类似腾讯 vConsole 中控制台功能，可以打印数组、对象、字符串、数字、布尔值等",
+        link: "https://github.com/GrammyLi/console",
+      },
+      {
+        name: "json-parse",
+        text: "支持解析数组、对象、数字、字符串、转义符和布尔值",
+        link: "https://github.com/GrammyLi/json-parse",
+      },
+      // {
+      //   name: "g-avatar",
+      //   text: "用户可以直接上传或者拍照上传头像，然后点击相应的主题之后，选择相应的挂件或者滤镜效果来装饰头像",
+      //   link: "https://grammyli.com/t/avatar/",
+      // },
+      // {
+      //   name: "g-search",
+      //   text: "用户在输入框内填写搜索的内容，点击选择相应引擎，即可搜索相应内容，支持相应主题和模式切换，并且网址收藏、搜索历史关键字展示功能等功能。",
+      //   link: "",
+      // },
+    ],
+    isResume: true,
+  },
+  // 宝可梦乐园系列
+  {
+    name: "宝可梦乐园",
+    cover: "",
+    preveiwLink: "",
+    codeLink: "",
+    details: [
+      // {
+      //   name: "Card",
+      //   text: "纸牌能够一起被拖入另一列。",
+      //   link: "", // 可选：链接到详细说明或代码仓库
+      // },
+      {
+        name: "扫雷",
+        text: "用户右键可以标记雷，可以记录时间，第一次点击必不为雷",
+        link: "https://grammyli.com/g/sweeping/",
+      },
+      {
+        name: "消消乐",
+        text: "用户选择两只宝可梦可以消除",
+        link: "https://grammyli.com/g/popstar/",
+      },
+      {
+        name: "连连看",
+        text: "用户点击两个相同的宝可梦，才能显示路径，同时消除宝可梦",
+        link: "https://grammyli.com/g/link/",
+      },
+      {
+        name: "记忆纸牌",
+        text: "用户用鼠标点击空白处，或者键盘按 wsad 来移动图块。",
+        link: "https://grammyli.com/g/puzzle/",
+      },
+      // {
+      //   name: "Fill",
+      //   text: "用户点击宝可梦，来填充整个画布，同时可以设置主题或者画布的宽高。",
+      //   link: "",
+      // },
+    ],
+    isResume: true,
+  },
   // 其他项目数据...
 ];
 
@@ -76,19 +175,3 @@ export const projects: Project[] = [
 
 // 用户密码实现加盐加密、CSRF token 防御等多级手段提高安全性，保障用户数据的安全。
 // 帖子发表、修改、删除、话题板块选择， Markdown 格式支持， 回复/阅读量显示。
-
-// g-echart：自制可视化库，实现柱形图和折线图。
-//  2. g-pinyin：简易拼音输入法。
-//  3. g-formatter：在线 js 代码格式化工具。
-//   4. g-game-framework：基于自制游戏引擎，实现 cxk basktetball、flappy bird 和stick hero 等游戏。
-//   5. g-console：实现类似腾讯 vConsole 中控制台功能，可以打印数组、对象、字符串、数字、布尔值等。
-//   6. g-avatar：用户可以直接上传或者拍照上传头像，然后点击相应的主题之后，选择相应的挂件或者滤 镜效果来装饰头像。
-//   7. g-search：用户在输入框内填写搜索的内容，点击选择相应引擎，即可搜索相应内容，
-//   支持相应主 题和模式切换切换，并且网址收藏，搜索历史关键字展示功能等功能。 
-//   宝可梦乐园
-//   1. Card: 纸牌能够一起被拖入另一列。
-//   2. Sweeping： 用户右键可以标记雷，可以记录时间，第一次点击必不为雷。「像素扫雷」
-//   3. Popstar: 用户选择的六只宝可梦，才能体验 Popstar 游戏。
-//    4. Link: 用户点击两个相同的宝可梦，才能显示路径，同时消除宝可梦。
-//     5. Puzzle: 用户用鼠标点击空白处，或者键盘按 wsad 来移动图块。
-// 6. Fill: 用户点击宝可梦，来填充整个画布，同时可以设置主题或者画布的宽高。

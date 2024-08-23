@@ -5,7 +5,7 @@ import { EyeOutlined, LinkOutlined } from "@ant-design/icons";
 import "./index.less";
 import { projects } from "../../data/projects";
 
-const { Title } = Typography;
+const { Title, Link, Paragraph } = Typography;
 
 const Projects: React.FC = () => {
   const [showAll, setShowAll] = useState(false);
@@ -26,7 +26,9 @@ const Projects: React.FC = () => {
           <Col xs={24} sm={24} md={12} lg={8} xl={6} key={index}>
             <Card
               title={project.name}
-              cover={<img alt={project.name} src={project.cover} />}
+              cover={
+                project.cover && <img alt={project.name} src={project.cover} />
+              }
               className="projects__card"
               actions={[
                 <Button
@@ -49,7 +51,28 @@ const Projects: React.FC = () => {
             >
               {project.details.map((detail, detailIndex) => (
                 <div key={detailIndex} className="projects__detail">
-                  <p>{detail}</p>
+                  {typeof detail === "string" ? (
+                    <Paragraph key={detailIndex}>{detail}</Paragraph>
+                  ) : (
+                    <Paragraph key={detailIndex}>
+                      {detail.link ? (
+                        <>
+                          <Link
+                            href={detail.link}
+                            target="_blank"
+                            style={{
+                              textDecorationLine: "underline",
+                            }}
+                          >
+                            {detail.name}
+                          </Link>
+                          {detail.text ? `:${detail.text}` : ""}
+                        </>
+                      ) : (
+                        `${detail.name}: ${detail.text}`
+                      )}
+                    </Paragraph>
+                  )}
                 </div>
               ))}
             </Card>

@@ -1,5 +1,5 @@
 import { Spin } from "antd";
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useMemo } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.less";
 import FooterComponent from "./pages/components/Footer";
@@ -12,23 +12,26 @@ const Projects = lazy(() => import("./pages/Projects"));
 const Resume = lazy(() => import("./pages/Resume"));
 
 const App: React.FC = () => {
+  const isCv = useMemo(() => {
+    return window.location.hash.split("/")[1] === "cv";
+  }, [location.hash]);
+
   return (
     <Router>
       <div className="App">
-        <AppMenu />
+        {!isCv && <AppMenu />}
         <div className="content">
-          <Suspense
-            fallback={<Spin className="App__spin"/>}
-          >
+          <Suspense fallback={<Spin className="App__spin" />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/resume" element={<Resume />} />
+              <Route path="/resume" element={<Resume isCv={false} />} />
+              <Route path="/cv" element={<Resume isCv={true} />} />
             </Routes>
           </Suspense>
         </div>
-        <FooterComponent />
+        {!isCv && <FooterComponent />}
       </div>
     </Router>
   );
