@@ -10,10 +10,18 @@ const Home = lazy(() => import("./pages"));
 const About = lazy(() => import("./pages/About"));
 const Projects = lazy(() => import("./pages/Projects"));
 const Resume = lazy(() => import("./pages/Resume"));
+const Filter = lazy(() => import("./pages/Image/Filter"));
+const Avatar = lazy(() => import("./pages/Image/Avatar"));
 
 const App: React.FC = () => {
   const isCv = useMemo(() => {
     return window.location.hash.split("/")[1] === "cv";
+  }, [location.hash]);
+
+  const showFooter = useMemo(() => {
+    let h = window.location.hash.split("/")[1];
+    let notValidhashs = ["cv"];
+    return !notValidhashs.includes(h);
   }, [location.hash]);
 
   return (
@@ -28,10 +36,12 @@ const App: React.FC = () => {
               <Route path="/projects" element={<Projects />} />
               <Route path="/resume" element={<Resume isCv={false} />} />
               <Route path="/cv" element={<Resume isCv={true} />} />
+              <Route path="/filter" element={<Filter />} />
+              <Route path="/avatar" element={<Avatar />} />
             </Routes>
           </Suspense>
         </div>
-        {!isCv && <FooterComponent />}
+        {showFooter && <FooterComponent />}
       </div>
     </Router>
   );

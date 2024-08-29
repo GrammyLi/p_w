@@ -115,7 +115,6 @@ const GResume = (props: { isCv: boolean }) => {
                 <Paragraph key={detailIndex}>
                   {detail.link ? (
                     <>
-                      {" "}
                       <Link
                         href={detail.link}
                         target="_blank"
@@ -126,10 +125,10 @@ const GResume = (props: { isCv: boolean }) => {
                       >
                         {detail.name}
                       </Link>
-                      {detail.text ? `:${detail.text}` : ""}
+                      {detail.text ? `${detail.text}` : ""}
                     </>
                   ) : (
-                    `${detail.name}: ${detail.text}`
+                    `${detail.name} ${detail.text}`
                   )}
                 </Paragraph>
               )

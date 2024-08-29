@@ -43,7 +43,7 @@ export const resumeData: Resume = {
   wechat: "grammyli",
   website: "https://grammyli.com/",
   objective:
-    "我是一个充满活力、对前端由衷热爱、善于发现问题的前端工程师。我目前正在寻找前端工程师岗位，希望借此机会为贵司献上我的一点绵薄之力",
+    "21届毕业，全日制本科，计算机科学与技术专业，校招在腾讯 CSIG Wecity 团队，负责会议和 TDGV 模板页面框架前端开发。如今在北京一览 AI 团队，从事 AIGC 产品前端开发,负责 AI 绘图、海报、数字人、视频、混剪等重要模块的开发与重构。",
   skills: [
     {
       category: "个人技能",
