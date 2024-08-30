@@ -1,5 +1,5 @@
-import React from "react";
-import { Button } from "antd";
+import React, { Suspense } from "react";
+import { Button, Spin } from "antd";
 import { RightCircleOutlined } from "@ant-design/icons";
 
 import "./index.less";

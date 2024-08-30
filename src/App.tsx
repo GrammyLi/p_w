@@ -2,6 +2,7 @@ import { Spin } from "antd";
 import React, { Suspense, lazy, useMemo } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.less";
+import CoolBackground from "./pages/components/CoolBackground";
 import FooterComponent from "./pages/components/Footer";
 import AppMenu from "./pages/components/Menu";
 
@@ -27,6 +28,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
+        <CoolBackground /> {/* 使用 CoolBackground 组件作为背景 */}
         {!isCv && <AppMenu />}
         <div className="content">
           <Suspense fallback={<Spin className="App__spin" />}>
