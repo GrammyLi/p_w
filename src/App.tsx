@@ -14,6 +14,8 @@ const Resume = lazy(() => import("./pages/Resume"));
 const Filter = lazy(() => import("./pages/Image/Filter"));
 const Avatar = lazy(() => import("./pages/Image/Avatar"));
 
+const Popstar = lazy(() => import("./pages/Game/Popstar"));
+
 const App: React.FC = () => {
   const isCv = useMemo(() => {
     return window.location.hash.split("/")[1] === "cv";
@@ -40,6 +42,7 @@ const App: React.FC = () => {
               <Route path="/cv" element={<Resume isCv={true} />} />
               <Route path="/filter" element={<Filter />} />
               <Route path="/avatar" element={<Avatar />} />
+              <Route path="/popstar" element={<Popstar />} />
             </Routes>
           </Suspense>
         </div>
