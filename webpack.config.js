@@ -36,6 +36,18 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(glb|gltf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "assets/models",
+              name: "[name].[hash].[ext]",
+            },
+          },
+        ],
+      },
+      {
         test: /\.tsx?$/, // 匹配 .ts 和 .tsx 文件
         use: [
           {
@@ -77,10 +89,10 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/, // 匹配图片文件
+        test: /\.(png|jpg|jpeg|gif|svg)$/, // 添加对 .glb 文件的支持
         type: "asset/resource",
         generator: {
-          filename: "images/[name][ext]", // 输出到 images 目录
+          filename: "assets/[name][ext]",
         },
       },
     ],
@@ -119,12 +131,12 @@ module.exports = {
     hot: true, // 启用热加载
   },
   performance: {
-    maxAssetSize: 1024000, // 1 MB，设置每个资源的大小限制
-    maxEntrypointSize: 1024000, // 1 MB，设置入口点的大小限制
+    maxAssetSize: 1024000 * 5, // 1 MB，设置每个资源的大小限制
+    maxEntrypointSize: 1024000 * 5, // 1 MB，设置入口点的大小限制
   },
-  //   performance: {
-  //     hints: false, // 关闭性能提示
-  //   },
+  // performance: {
+  //   hints: false, // 关闭性能提示
+  // },
 };
 
 // 解释：

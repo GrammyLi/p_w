@@ -8,11 +8,16 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
+    "@react-spring/three": "^9.7.3",
+    "@react-three/drei": "^9.88.2",
+    "@react-three/fiber": "^8.14.5",
     "antd": "^5.0.0",
+    "file-loader": "^6.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-easy-crop": "^5.0.8",
-    "react-router-dom": "^6.26.1"
+    "react-router-dom": "^6.26.1",
+    "three": "^0.157.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

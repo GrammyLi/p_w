@@ -30,8 +30,13 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
-        <CoolBackground /> {/* 使用 CoolBackground 组件作为背景 */}
-        {!isCv && <AppMenu />}
+        {/* 使用 CoolBackground 组件作为背景 */}
+        {!isCv && (
+          <>
+            <CoolBackground />
+            <AppMenu />
+          </>
+        )}
         <div className="content">
           <Suspense fallback={<Spin className="App__spin" />}>
             <Routes>
