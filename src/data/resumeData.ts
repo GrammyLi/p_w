@@ -36,9 +36,11 @@ export interface Resume {
   education: Education[];
 }
 
+const showPersonalInfo = false;
+
 export const resumeData: Resume = {
-  name: "李朝",
-  phone: "15927762230",
+  name: showPersonalInfo ? "李朝" : "grammyli",
+  phone: showPersonalInfo ? "15927762230" : "159*****30",
   email: "grammyli@outlook.com",
   wechat: "grammyli",
   website: "https://grammyli.com/",

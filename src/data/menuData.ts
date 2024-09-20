@@ -11,5 +11,7 @@ export const menuItems: MenuItem[] = [
   { key: "resume", label: "简历", path: "/resume" },
   { key: "avatar", label: "头像", path: "/avatar" },
   { key: "filter", label: "滤镜", path: "/filter" },
+  { key: "3d", label: "3d", path: "/3d" },
+
   // { key: "popstar", label: "消消乐", path: "/popstar" },
 ];
