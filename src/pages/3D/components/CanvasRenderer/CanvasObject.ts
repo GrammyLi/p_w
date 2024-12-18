@@ -53,7 +53,8 @@ export class CanvasObject {
     p[i + 3] = a;
   }
 
-  drawPoint(point: Vector, color: Color = Color.black()) {
+  drawPoint(point: Vector, color?: Color) {
+    color = color || Color.black();
     const { w, h } = this;
     if (point.x >= 0 && point.x <= w && point.y >= 0 && point.y <= h) {
       this._setPixel(point.x, point.y, color);
@@ -76,7 +77,7 @@ export class CanvasObject {
       // 使用 a.color 和 b.color 进行颜色插值，而不是直接使用 Vertex 对象
       const color = interpolate(a.color as any, b.color as any, factor);
       const vector = new Vector(i, y);
-      this.drawPoint(vector, color);
+      this.drawPoint(vector, color as any);
     }
 
     this.render();

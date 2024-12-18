@@ -39,7 +39,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/GrammyLi/g-webpack",
     details: [
       "根据主文件路径读取文件源码，利用 @babel/parser 将源码解析成 AST, 利用 @babel/core 将 AST 转成 ES5 代码",
-      "对生成的 AST 进行遍历并解析出当前文件的依赖文件路径， 根据文件路径递归获取到所有文件路径 和文件内容 把每个文件的 ",
+      "对生成的 AST 进行遍历并解析出当前文件的依赖文件路径， 根据文件路径递归获取到所有文件路径 和文件内容 ",
       "把每个文件的内容处理成模块形式，并将所有模块写入到一个 IIFE 形式的函数中，最后生成 bundle.js 文件",
     ],
     isResume: true,

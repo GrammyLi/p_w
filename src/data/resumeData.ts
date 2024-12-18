@@ -82,12 +82,12 @@ export const resumeData: Resume = {
     {
       companyName: "北京一览科技",
       position: "AI研发部 - 前端开发工程师",
-      time: "2022-02-至今",
+      time: "2023-02-至今",
       projects: [
         {
           name: "企业版运营宝 (React + Typescript + Ant + Less)",
           details: [
-            "参与 AIGC 产品的迭代开发，负责开发产品的 Ai 绘图、编剧、海报、数字人、混剪、视频和官网等模块, 以及企业版本的重点功能图文模块，对文章内容洗稿、图片洗图、图生文、OCR、制作海报等操作",
+            "参与 AIGC 产品的迭代开发，负责开发产品的 Ai 绘图、编剧、海报、数字人、视频和官网等模块, 以及企业版本的重点功能图文和视频模块，对内容洗稿、图片洗图、视频混剪、涂抹、和OCR等操作",
             "对系统进⾏功能分析和组件设计，二次封装多个 React 基础组件、业务组件多个通⽤组件、hook以及⼯具函数，帮助团队提⾼效率",
             "独⽴完成质量模型核⼼功能的架构设计，通过参数化配置实现⼀套代码满⾜多种场景",
             "承担多个模块的重构⼯作，包括⽅法提取、组件抽离、算法优化等，有效提⾼代码质量",
@@ -106,7 +106,7 @@ export const resumeData: Resume = {
     {
       companyName: "北京蒸汽记忆科技有限公司",
       position: "应用集成 - 前端开发工程师",
-      time: "2021.06 – 2022.01",
+      time: "2022.06 – 2023.01",
       projects: [
         // {
         //   name: "Authing 控制台 （React + Ant + TypeScript + Less + Webpack）",

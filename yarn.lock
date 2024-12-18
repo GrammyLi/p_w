@@ -1392,17 +1392,6 @@
     suspend-react "^0.1.3"
     zustand "^3.7.1"
 
-"@react-three/postprocessing@^2.16.2":
-  version "2.16.2"
-  resolved "https://registry.npmjs.org/@react-three/postprocessing/-/postprocessing-2.16.2.tgz#a6ed5aa0775d843eba845915c41160ce7fff3e79"
-  integrity sha512-2ya1gXLDpzyfbELobi3rPHNNZZCrCfyq20GMYJD1yD7ZyBFSpRG9YSPMBnOal6A89kXanPBw273h6/Dqev0n7g==
-  dependencies:
-    buffer "^6.0.3"
-    maath "^0.6.0"
-    n8ao "^1.6.6"
-    postprocessing "^6.32.1"
-    three-stdlib "^2.23.4"
-
 "@remix-run/router@1.19.1":
   version "1.19.1"
   resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.19.1.tgz#984771bfd1de2715f42394c87fb716c1349e014f"
@@ -3469,11 +3458,6 @@ maath@^0.10.7:
   resolved "https://registry.npmjs.org/maath/-/maath-0.10.8.tgz#cf647544430141bf6982da6e878abb6c4b804e24"
   integrity sha512-tRvbDF0Pgqz+9XUa4jjfgAQ8/aPKmQdWXilFu2tMy4GWj4NOsx99HlULO4IeREfbO3a0sA145DZYyvXPkybm0g==
 
-maath@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.npmjs.org/maath/-/maath-0.6.0.tgz#7841d0fb95bbb37d19b08b7c5458ef70190950d2"
-  integrity sha512-dSb2xQuP7vDnaYqfoKzlApeRcR2xtN8/f7WV/TMAkBC8552TwTLtOO0JTcSygkYMjNDPoo6V01jTw/aPi4JrMw==
-
 make-dir@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/make-dir/-/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
@@ -3600,11 +3584,6 @@ multicast-dns@^7.2.5:
   dependencies:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
-
-n8ao@^1.6.6:
-  version "1.8.4"
-  resolved "https://registry.npmjs.org/n8ao/-/n8ao-1.8.4.tgz#763b4f7ce137859408c8c190a6f2188f327d3d46"
-  integrity sha512-xaPub6na6jGAW7rbANcMcnKNhNa3Fmsbe1WY5mzI9bDuBTQmP6X2G1Xq1t2Si8dxJjqYPvNZX3xhXfkNw8jQBQ==
 
 nanoid@^3.3.7:
   version "3.3.7"
@@ -3902,11 +3881,6 @@ postcss@^8.4.33:
     nanoid "^3.3.7"
     picocolors "^1.0.1"
     source-map-js "^1.2.0"
-
-postprocessing@^6.32.1, postprocessing@^6.36.0:
-  version "6.36.0"
-  resolved "https://registry.npmjs.org/postprocessing/-/postprocessing-6.36.0.tgz#e795c986f85d1a500e13d9c6e25a140e1156f25f"
-  integrity sha512-7V2t8Yi+Edh0FybErMdBV3CCJ/tTeNeLh6z+i0VczwZ6HGV3XyRfC8v4Ps9a6tjawcTvatLptQzX8QnDlU8BXw==
 
 potpack@^1.0.1:
   version "1.0.2"
@@ -4950,7 +4924,7 @@ three-mesh-bvh@^0.7.0:
   resolved "https://registry.npmjs.org/three-mesh-bvh/-/three-mesh-bvh-0.7.6.tgz#6764b39475bdba9450ad3a4065492678ee537272"
   integrity sha512-rCjsnxEqR9r1/C/lCqzGLS67NDty/S/eT6rAJfDvsanrIctTWdNoR4ZOGWewCB13h1QkVo2BpmC0wakj1+0m8A==
 
-three-stdlib@^2.23.4, three-stdlib@^2.29.9:
+three-stdlib@^2.29.9:
   version "2.32.2"
   resolved "https://registry.npmjs.org/three-stdlib/-/three-stdlib-2.32.2.tgz#ddfbfc6c352b1240cb38121b2b808fa1bde1dcc8"
   integrity sha512-ZN25Na/Xg7APhGKwJ1zhGdhZDsDGGnnm1k5Z+9LLlnfsFye4jigvbN3eA/Ta8hQmBNmEHXoozpmpKK1x8dCePQ==
