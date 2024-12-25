@@ -16,6 +16,7 @@ const Avatar = lazy(() => import("./pages/Image/Avatar"));
 
 const Popstar = lazy(() => import("./pages/Game/Popstar"));
 const Three = lazy(() => import("./pages/3D"));
+const Example = lazy(() => import("./pages/Example"));
 
 const App: React.FC = () => {
   const isCv = useMemo(() => {
@@ -50,6 +51,7 @@ const App: React.FC = () => {
               <Route path="/avatar" element={<Avatar />} />
               <Route path="/popstar" element={<Popstar />} />
               <Route path="/3d" element={<Three />} />
+              <Route path="/example" element={<Example />} />
             </Routes>
           </Suspense>
         </div>

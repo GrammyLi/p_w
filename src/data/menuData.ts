@@ -14,4 +14,5 @@ export const menuItems: MenuItem[] = [
   // { key: "3d", label: "3d", path: "/3d" },
 
   // { key: "popstar", label: "消消乐", path: "/popstar" },
+  { key: "example", label: "组件案例", path: "/example" },
 ];
