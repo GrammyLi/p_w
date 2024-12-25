@@ -36,7 +36,7 @@ export interface Resume {
   education: Education[];
 }
 
-const showPersonalInfo = false;
+const showPersonalInfo = true;
 
 export const resumeData: Resume = {
   name: showPersonalInfo ? "李朝" : "grammyli",
@@ -81,7 +81,7 @@ export const resumeData: Resume = {
   jobs: [
     {
       companyName: "北京一览科技",
-      position: "AI研发部 - 前端开发工程师",
+      position: "AI研发部 - 前端",
       time: "2023-02-至今",
       projects: [
         {
@@ -105,7 +105,7 @@ export const resumeData: Resume = {
     },
     {
       companyName: "北京蒸汽记忆科技有限公司",
-      position: "应用集成 - 前端开发工程师",
+      position: "应用集成 - 前端",
       time: "2022.06 – 2023.01",
       projects: [
         // {
@@ -121,7 +121,7 @@ export const resumeData: Resume = {
     },
     {
       companyName: "重庆腾讯信息技术有限公司",
-      position: "CSIG Wecity - 前端开发工程师",
+      position: "CSIG Wecity - 前端",
       time: "2021.06 – 2022.06",
       projects: [
         {
@@ -147,7 +147,7 @@ export const resumeData: Resume = {
     },
     {
       companyName: "ponyCody",
-      position: "远程实习-Web 前端开发工程师",
+      position: "远程实习-Web 前端",
       time: "2020.07 – 2021.05",
       projects: [
         {

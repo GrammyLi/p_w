@@ -76,8 +76,17 @@ const GResume = (props: { isCv: boolean }) => {
       {resumeData.jobs.map((job, jobIndex) => (
         <div key={jobIndex}>
           <Title level={3}>
-            {job.companyName} <Text type="secondary">{job.position}</Text>{" "}
-            <Text type="secondary">{job.time}</Text>
+            {job.companyName} - {job.position}
+            {/* {job.companyName} <Text type="secondary">{job.position}</Text>{" "} */}
+            <Text
+              type="secondary"
+              style={{
+                color: "rgb(75 85 99)",
+                float: "right",
+              }}
+            >
+              {job.time}
+            </Text>
           </Title>
           {job.projects.map((project, projectIndex) => (
             <div key={projectIndex}>
@@ -142,7 +151,16 @@ const GResume = (props: { isCv: boolean }) => {
         <div key={eduIndex}>
           <Title level={3}>{edu.institution}</Title>
           <Paragraph>
-            {edu.major} <Text type="secondary">{edu.period}</Text>{" "}
+            {edu.major}{" "}
+            <Text
+              type="secondary"
+              style={{
+                color: "rgb(75 85 99)",
+                float: "right",
+              }}
+            >
+              {edu.period}
+            </Text>{" "}
           </Paragraph>
         </div>
       ))}
