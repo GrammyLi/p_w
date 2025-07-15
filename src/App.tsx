@@ -23,6 +23,8 @@ const App: React.FC = () => {
     return window.location.hash.split("/")[1] === "cv";
   }, [location.hash]);
 
+  console.log("isCv", isCv);
+
   const showFooter = useMemo(() => {
     let h = window.location.hash.split("/")[1];
     let notValidhashs = ["cv"];
@@ -33,12 +35,12 @@ const App: React.FC = () => {
     <Router>
       <div className="App">
         {/* 使用 CoolBackground 组件作为背景 */}
-        {!isCv && (
+        {/* {!isCv && (
           <>
             <CoolBackground />
             <AppMenu />
           </>
-        )}
+        )} */}
         <div className="content">
           <Suspense fallback={<Spin className="App__spin" />}>
             <Routes>
